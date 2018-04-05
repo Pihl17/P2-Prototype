@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{6D1752A0-89BA-C677-D2AB-FDCDD0B60749}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/RotateCamera.cs">
+    <Files>
+      <File FileName="Assets/Movement.cs" Line="17" Column="9" />
+      <File FileName="Assets/RotateCamera.cs" Line="19" Column="50" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.P2_220Prototype PreferredExecutionTarget="Unity.Editor" />
+  <MultiItemStartupConfigurations />
+</Properties>
