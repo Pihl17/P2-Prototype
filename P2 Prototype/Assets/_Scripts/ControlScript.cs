@@ -4,18 +4,24 @@ using UnityEngine;
 
 public class ControlScript : MonoBehaviour {
 
-	public Tracking[] trackers;
+	Tracking[] trackers;
+	float angleMargin = 45;
+
 	public float speed;
 
 	// Use this for initialization
 	void Start () {
-		
+		GameObject[] trackingObjects = GameObject.FindGameObjectsWithTag ("Trackers");
+		trackers = new Tracking[trackingObjects.GetLength(0)];
+		for (int i = 0; i < trackingObjects.GetLength(0); i++) {
+			trackers [i] = trackingObjects[i].GetComponent<Tracking>();
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		for (int i = 0; i < trackers.GetLength(0); i++) {
-			if (CheckRequiredMovement(trackers[i]))
+			if (CheckRequiredMovement(trackers[i].deltaPos))
 				Move(trackers[i].deltaPos.magnitude*speed);
 		}
 	}
@@ -24,12 +30,13 @@ public class ControlScript : MonoBehaviour {
 		transform.Translate(0,0,forward,Space.Self);
 	}
 
-	bool CheckRequiredMovement(Tracking tracker) {
-		Vector3 normalisedTracker = tracker.deltaPos.normalized;
-		float angle = Mathf.Atan2 (normalisedTracker.x, normalisedTracker.y) % Mathf.PI;
-		if (angle < Mathf.PI / 8 && angle > -Mathf.PI / 8)
+	bool CheckRequiredMovement(Vector3 direction) {
+		if (direction == Vector3.zero) return false; 
+		float angle = Vector3.Angle(direction, Vector3.up);
+		print(angle);
+		if (angle <= angleMargin || angle >= 180-angleMargin) {
 			return true;
-		else
+		} else
 			return false;
 	}
 
