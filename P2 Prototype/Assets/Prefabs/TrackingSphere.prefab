@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4449793705772554}
   - component: {fileID: 33443620852433078}
-  - component: {fileID: 135030870569967234}
   - component: {fileID: 23455444507803374}
   - component: {fileID: 114658551184747414}
   m_Layer: 0
@@ -98,17 +97,5 @@ MonoBehaviour:
   controlType: 0
   disFromCam: 5
   deltaDis: 0.0015
-  controllerSpeed: 5
+  controllerSpeed: 1.5
   deltaPos: {x: 0, y: 0, z: 0}
---- !u!135 &135030870569967234
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1672273559617174}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
