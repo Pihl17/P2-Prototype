@@ -30,7 +30,7 @@ public class CamraOrbit : MonoBehaviour
 
     void LateUpdate()
     {
-        Movement m = GetComponentInParent<Movement>();
+        //Movement m = GetComponentInParent<Movement>();
         // disable camera controlls left shift key buttom
         if (Input.GetKeyDown(KeyCode.LeftShift))
             // swicthes between camera working and not, per click on left shift
@@ -47,7 +47,7 @@ public class CamraOrbit : MonoBehaviour
                 _LocalRotation.x += Input.GetAxis("Mouse X") * MouseSensitivity;
                 _LocalRotation.y -= Input.GetAxis("Mouse Y") * MouseSensitivity;
                 // Calls the function "move" from the movement class/script
-                m.move(transform);
+                //m.Move(transform);
                 //Clamp the Y rotation to horizontal and not flipping over at the top
 
                 // This works as the constrain function in processing(value, minValue,maxValue)

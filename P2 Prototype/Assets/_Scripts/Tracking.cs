@@ -11,7 +11,8 @@ public class Tracking : MonoBehaviour {
 	public float disFromCam;
 	public float deltaDis;
 	public float controllerSpeed = 2;
-	Vector2 controllerPos = new Vector2();
+
+	Vector3 pos = new Vector3();
 
 	public Vector3 deltaPos;
 
@@ -21,14 +22,14 @@ public class Tracking : MonoBehaviour {
 		if (controlType == TypeOfControl.mouse)
 			UpdatePositionByMouse ();
 		else if (controlType == TypeOfControl.controllerLeft)
-			UpdatePositionByController(-0.2f/Time.deltaTime,0);
+			UpdatePositionByController(0,0);
 		else if (controlType == TypeOfControl.controllerPS4Right || controlType == TypeOfControl.controllerXBoneRight)
-			UpdatePositionByController(0.2f/Time.deltaTime,0);
+			UpdatePositionByController(0,0);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		Vector3 oldPos = transform.position;
+		Vector3 oldPos = pos;
 		if (controlType == TypeOfControl.mouse) {
 			UpdatePositionByMouse ();
 		} else if (controlType == TypeOfControl.controllerLeft) {
@@ -38,12 +39,14 @@ public class Tracking : MonoBehaviour {
 		} else if (controlType == TypeOfControl.controllerPS4Right) {
 			UpdatePositionByController (Input.GetAxis("HorizontalPS4"), Input.GetAxis("VerticalPS4"));
 		}
-		deltaPos = transform.position - oldPos;
+		deltaPos = pos - oldPos;
 	}
 
 
 
 	void UpdatePositionByMouse() {
+		pos = new Vector3(Input.mousePosition.x, Input.mousePosition.y);
+
 		float opp = -(Input.mousePosition.x - Screen.width/2)*deltaDis;
 		transform.position = new Vector3 (
 			-disFromCam * opp * Mathf.Cos (CamAngle()) + disFromCam * Mathf.Sin (CamAngle()),
@@ -53,11 +56,11 @@ public class Tracking : MonoBehaviour {
 	}
 
 	void UpdatePositionByController(float right, float up) {
-		controllerPos += (-right*Vector2.right + up*Vector2.up)*controllerSpeed*Time.deltaTime;
+		pos += (-right*Vector3.right + up*Vector3.up)*controllerSpeed*Time.deltaTime;
 		transform.position = new Vector3 (
-			-disFromCam * controllerPos.x * Mathf.Cos (CamAngle()) + disFromCam * Mathf.Sin (CamAngle()),
-			controllerPos.y * disFromCam,
-			disFromCam * controllerPos.x * Mathf.Sin (CamAngle()) + disFromCam * Mathf.Cos (CamAngle())
+			-disFromCam * pos.x * Mathf.Cos (CamAngle()) + disFromCam * Mathf.Sin (CamAngle()),
+			pos.y * disFromCam,
+			disFromCam * pos.x * Mathf.Sin (CamAngle()) + disFromCam * Mathf.Cos (CamAngle())
 		)+camTrans.position;
 	}
 

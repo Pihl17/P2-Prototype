@@ -51,11 +51,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\_Scripts\ControlScript.cs" />
+     <Compile Include="Assets\_Scripts\CamraOrbit.cs" />
      <Compile Include="Assets\_Scripts\Movement.cs" />
+     <Compile Include="Assets\_Scripts\RotateObject.cs" />
      <Compile Include="Assets\_Scripts\Tracking.cs" />
-     <Compile Include="Assets\CamraOrbit.cs" />
-     <Compile Include="Assets\RotateObject.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
