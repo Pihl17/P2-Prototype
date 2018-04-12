@@ -53,6 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\_Scripts\CamraOrbit.cs" />
      <Compile Include="Assets\_Scripts\Movement.cs" />
+     <Compile Include="Assets\_Scripts\NodeScript.cs" />
      <Compile Include="Assets\_Scripts\RotateObject.cs" />
      <Compile Include="Assets\_Scripts\Tracking.cs" />
  <Reference Include="UnityEngine.UI">

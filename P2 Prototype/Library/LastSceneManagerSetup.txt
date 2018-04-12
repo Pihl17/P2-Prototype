@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/AllTogether.unity
+- path: Assets/Scenes/VRTest.unity
   isLoaded: 1
   isActive: 1
