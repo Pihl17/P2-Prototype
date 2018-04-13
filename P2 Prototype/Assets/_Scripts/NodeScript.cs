@@ -5,25 +5,45 @@ using UnityEngine.XR;
 
 public class NodeScript : MonoBehaviour {
 
-	public enum nodeType {left, right};
+	public enum nodeType {leftHand, rightHand};
 	public nodeType typeOfNode;
+
+	public Vector3 deltaPos;
 
 	// Use this for initialization
 	void Start () {
-		
+		TrackPosition ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (typeOfNode == nodeType.left)
-			UpdatePosition (XRNode.LeftHand);
-		else if (typeOfNode == nodeType.right) 
-			UpdatePosition (XRNode.RightHand);
+		Vector3 oldPos = transform.position;
+		TrackPosition ();
+		deltaPos = transform.position - oldPos;
 	}
 
+	void TrackPosition () {
+		if (typeOfNode == nodeType.leftHand)
+			TrackPosition (XRNode.LeftHand);
+		else if (typeOfNode == nodeType.rightHand)
+			TrackPosition (XRNode.RightHand);
+	}
 
-	void UpdatePosition(XRNode node) {
+	void TrackPosition (XRNode node) {
 		transform.position = InputTracking.GetLocalPosition(node);
 		transform.rotation = InputTracking.GetLocalRotation(node);
 	}
+
+	public Vector3 getPosition() {
+		return transform.position;
+	}
+
+	static public bool Above(NodeScript node1, NodeScript node2) {
+		return node1.getPosition().y > node2.getPosition().y;
+	}
+
+	public bool Above(NodeScript node) {
+		return Above(this, node);
+	}
+
 }

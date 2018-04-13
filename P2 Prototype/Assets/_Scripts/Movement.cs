@@ -4,41 +4,59 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour {
 
-	Tracking[] trackers;
-	float angleMargin = 45;
+	NodeScript[] nodes;
+	//float angleMargin = 45;
 
     public float speed;
 
 	// Use this for initialization
 	void Start () {
 		GameObject[] trackingObjects = GameObject.FindGameObjectsWithTag ("Trackers");
-		trackers = new Tracking[trackingObjects.GetLength(0)];
-		for (int i = 0; i < trackingObjects.GetLength(0); i++) {
-			trackers [i] = trackingObjects[i].GetComponent<Tracking>();
+		nodes = new NodeScript[trackingObjects.GetLength(0)];
+
+		for (int i = 0; i < trackingObjects.GetLength (0) && i < nodes.GetLength (0); i++) {
+			if (trackingObjects [i].GetComponent<NodeScript> () != null)
+				nodes [i] = trackingObjects [i].GetComponent<NodeScript> ();
+			else
+				Debug.LogErrorFormat (trackingObjects [i], "No NodeScript on Object!"); 
+				// Logs an error message, if one then clicked on the message would the object put in as the first argument be highlighted;
+				// In this case showing what object is missing the script or is wrongly tagged as a tracker.
 		}
+
+		// Just for some debugging
+		if (nodes.GetLength (0) < 2)
+			Debug.LogErrorFormat ("There seems to be less tracking objects than expected...");
+		else if (nodes.GetLength (0) > 2)
+			Debug.LogErrorFormat ("There seems to be more tracking objects than expected...");
+		
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		//move(transform);
-		for (int i = 0; i < trackers.GetLength(0); i++) {
-			if (CheckRequiredMovement(trackers[i].deltaPos))
-				Move(Camera.main.transform, 0, trackers[i].deltaPos.magnitude*speed);
+	void Update	() {
+		if (nodes.GetLength (0) == 2) {
+			float totalMagnitude = nodes[0].deltaPos.magnitude + nodes[1].deltaPos.magnitude;
+
+			if (NodeScript.Above (nodes [0], nodes [1]) && CheckRequiredMovement(nodes[0].deltaPos))
+				Move (nodes[0].deltaPos, totalMagnitude);
+			else if (NodeScript.Above (nodes [1], nodes [0]) && CheckRequiredMovement(nodes[0].deltaPos))
+				Move (nodes[1].deltaPos, totalMagnitude);
 		}
 	}
 
-    public void Move(Transform trans)
-    {
-		Move(trans, Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-		/*float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
-        float angle = trans.rotation.eulerAngles.y * Mathf.Deg2Rad;
+	void Move(Vector3 direction, float distance) {
+		if (direction.y != 0) direction.y = 0;
+		float angle = Vector3.Angle(Vector3.forward, direction);
 
-        transform.Translate(moveHorizontal * speed * Mathf.Cos(angle)-moveVertical*speed - moveVertical * speed * Mathf.Sin(angle), 0f, moveHorizontal * speed * Mathf.Sin(angle) + moveVertical * speed + moveVertical * speed * Mathf.Cos(angle));
-        */
+		transform.Translate ( new Vector3(Mathf.Sin(angle), 0, Mathf.Cos(angle)) * distance * speed);
+	}
+
+
+
+    void Move(Transform trans) {
+		Move(trans, Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
     }
 
-	public void Move(Transform trans, float moveHorizontal, float moveVertical) {
+	void Move(Transform trans, float moveHorizontal, float moveVertical) {
 		float angle = trans.rotation.eulerAngles.y * Mathf.Deg2Rad;
 
 		transform.Translate(-moveHorizontal * speed * Mathf.Cos(angle) + moveVertical * speed * Mathf.Sin(angle), 
@@ -47,13 +65,18 @@ public class Movement : MonoBehaviour {
 		
 	}
 
+
+
 	bool CheckRequiredMovement(Vector3 direction) {
+		return true;
+		/*
 		if (direction == Vector3.zero) return false; 
 		float angle = Vector3.Angle(direction, Vector3.up);
 		if (angle <= angleMargin || angle >= 180-angleMargin) {
 			return true;
 		} else
 			return false;
+		*/
 	}
 
 }
