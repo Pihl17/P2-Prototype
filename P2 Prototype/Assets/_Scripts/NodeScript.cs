@@ -30,7 +30,7 @@ public class NodeScript : MonoBehaviour {
 	}
 
 	void TrackPosition (XRNode node) {
-		transform.position = InputTracking.GetLocalPosition(node);
+		transform.localPosition = InputTracking.GetLocalPosition(node);
 		transform.rotation = InputTracking.GetLocalRotation(node);
 	}
 
