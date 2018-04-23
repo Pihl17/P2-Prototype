@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio for Mac
+# Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P2 Prototype.Plugins", "P2 Prototype.Plugins.csproj", "{BE7531D1-C519-E8B4-4790-44A066AABED9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P2 Prototype", "P2 Prototype.csproj", "{6D1752A0-89BA-C677-D2AB-FDCDD0B60749}"
