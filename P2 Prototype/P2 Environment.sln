@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio for Mac
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P2 Environment.Plugins", "P2 Environment.Plugins.csproj", "{C71540D3-4D8A-46F1-EACD-220270E99042}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P2 Environment.Editor.Plugins", "P2 Environment.Editor.Plugins.csproj", "{13A77D9D-E56A-64DD-30A9-55B8C9EDCDA6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C71540D3-4D8A-46F1-EACD-220270E99042}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C71540D3-4D8A-46F1-EACD-220270E99042}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C71540D3-4D8A-46F1-EACD-220270E99042}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C71540D3-4D8A-46F1-EACD-220270E99042}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13A77D9D-E56A-64DD-30A9-55B8C9EDCDA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13A77D9D-E56A-64DD-30A9-55B8C9EDCDA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13A77D9D-E56A-64DD-30A9-55B8C9EDCDA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13A77D9D-E56A-64DD-30A9-55B8C9EDCDA6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
