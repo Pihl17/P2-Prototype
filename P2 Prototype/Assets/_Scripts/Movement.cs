@@ -11,7 +11,6 @@ public class Movement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update	() {
-		Move(Time.deltaTime);
 		foreach (NodeScript node in nodes) {
 			if (CheckRequiredMovement(node.deltaPos)) {
 				Move(node.deltaPos.magnitude);
