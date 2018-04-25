@@ -6,11 +6,12 @@ public class Movement : MonoBehaviour {
 
 	public NodeScript[] nodes;
 	public float angleMargin = 45;
+    public float distancemargin = 0.0001f;
 
     public float speed = 5;
 	
 	// Update is called once per frame
-	void Update	() {
+	void Update () {
 		foreach (NodeScript node in nodes) {
 			if (CheckRequiredMovement(node.deltaPos)) {
 				Move(node.deltaPos.magnitude);
@@ -19,11 +20,11 @@ public class Movement : MonoBehaviour {
 	}
 
 	void Move(float distance) {
-		transform.Translate(distance*speed*Vector3.forward);
-	}
+        GetComponent<Rigidbody>().AddForce(distance * speed * Vector3.right / Time.deltaTime);
+    }
 
 	bool CheckRequiredMovement(Vector3 direction) {
-		if (direction == Vector3.zero) return false; 
+		if (direction == Vector3.zero || direction.magnitude < distancemargin) return false; 
 		float angle = Vector3.Angle(Vector3.forward, direction);
 		return (angle <= angleMargin || angle >= 180-angleMargin);
 

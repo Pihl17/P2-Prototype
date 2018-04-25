@@ -11,6 +11,7 @@ public class NodeScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        InputTracking.disablePositionalTracking = true;
 		oldPos = TrackPosition(nodeType);
 	}
 	
