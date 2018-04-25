@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Trackers
   - Plank
+  - transformPlank
   layers:
   - Default
   - TransparentFX

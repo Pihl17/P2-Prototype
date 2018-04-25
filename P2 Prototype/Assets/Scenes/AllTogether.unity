@@ -1476,7 +1476,7 @@ MonoBehaviour:
   - {fileID: 1514503530}
   - {fileID: 1279307673}
   Player: {fileID: 1279686578}
-  player: {fileID: 0}
+  player: {fileID: 1279686579}
 --- !u!65 &654685509
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2482,7 +2482,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4493355027635138, guid: f3b718e1a6c035b43acad05c9aaeffbc, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.53246343
+      value: 0.7020259
       objectReference: {fileID: 0}
     - target: {fileID: 4493355027635138, guid: f3b718e1a6c035b43acad05c9aaeffbc, type: 2}
       propertyPath: m_LocalRotation.z
@@ -2490,7 +2490,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4493355027635138, guid: f3b718e1a6c035b43acad05c9aaeffbc, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.846453
+      value: 0.71215135
       objectReference: {fileID: 0}
     - target: {fileID: 4493355027635138, guid: f3b718e1a6c035b43acad05c9aaeffbc, type: 2}
       propertyPath: m_RootOrder
@@ -2519,7 +2519,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4493355027635138, guid: f3b718e1a6c035b43acad05c9aaeffbc, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 64.344
+      value: 89.18001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3b718e1a6c035b43acad05c9aaeffbc, type: 2}
@@ -2930,25 +2930,8 @@ MonoBehaviour:
   - {fileID: 648178895}
   - {fileID: 69705638}
   - {fileID: 69705638}
-  - {fileID: 69705638}
-  - {fileID: 69705638}
-  - {fileID: 69705638}
-  - {fileID: 69705638}
-  - {fileID: 69705638}
-  - {fileID: 69705638}
-  - {fileID: 69705638}
-  - {fileID: 69705638}
-  - {fileID: 69705638}
-  - {fileID: 69705638}
-  - {fileID: 69705638}
-  - {fileID: 69705638}
-  - {fileID: 69705638}
-  - {fileID: 69705638}
-  - {fileID: 69705638}
-  - {fileID: 69705638}
-  - {fileID: 69705638}
   Player: {fileID: 1279686578}
-  player: {fileID: 1279686579}
+  player: {fileID: 69705641}
 --- !u!65 &1750967903
 BoxCollider:
   m_ObjectHideFlags: 0

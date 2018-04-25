@@ -6,7 +6,7 @@ public class Movement : MonoBehaviour {
 
 	Tracking[] trackers;
 	float angleMargin = 45;
-
+    
     public float speed;
 
 	// Use this for initialization
