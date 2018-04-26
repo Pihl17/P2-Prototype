@@ -173,6 +173,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7783484c5bf9b8f4e9f0b1ba2b10d8a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nodes: []
+  angleMargin: 45
+  distancemargin: 0.0001
   speed: 0.5
 --- !u!114 &114973929097463536
 MonoBehaviour:
@@ -185,6 +188,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7783484c5bf9b8f4e9f0b1ba2b10d8a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nodes: []
+  angleMargin: 45
+  distancemargin: 0.0001
   speed: 0.05
 --- !u!124 &124573172251478438
 Behaviour:
