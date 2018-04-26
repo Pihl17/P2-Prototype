@@ -7,6 +7,8 @@ TagManager:
   - Trackers
   - Plank
   - Rope
+  - PlankOne
+  - PlanksEnd
   layers:
   - Default
   - TransparentFX
