@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Trackers
   - Plank
+  - Rope
   layers:
   - Default
   - TransparentFX
