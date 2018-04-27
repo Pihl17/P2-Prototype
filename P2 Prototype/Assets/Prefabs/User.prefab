@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4542885629739904}
   - component: {fileID: 33872604005162648}
-  - component: {fileID: 65500175144477688}
+  - component: {fileID: 136759110223066962}
   - component: {fileID: 23844121626810794}
   - component: {fileID: 54111939623156612}
   - component: {fileID: 114262012963530628}
@@ -317,18 +317,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!65 &65500175144477688
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1312139376278140}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!81 &81097539759287970
 AudioListener:
   m_ObjectHideFlags: 1
@@ -377,6 +365,7 @@ MonoBehaviour:
   - {fileID: 114167107166804892}
   - {fileID: 114203013522634790}
   angleMargin: 45
+  distancemargin: 0.0001
   speed: 5
 --- !u!114 &114574680973313882
 MonoBehaviour:
@@ -389,6 +378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e0247b0f7d80e4eab73f0556a961a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distance: 150
 --- !u!124 &124027852434834584
 Behaviour:
   m_ObjectHideFlags: 1
@@ -420,5 +410,18 @@ CapsuleCollider:
   m_Enabled: 0
   m_Radius: 0.5
   m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &136759110223066962
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1312139376278140}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
