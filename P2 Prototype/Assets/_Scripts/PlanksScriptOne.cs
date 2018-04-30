@@ -7,65 +7,40 @@ using UnityEngine;
 public class PlanksScriptOne : MonoBehaviour
 {
 
-   private  Vector3 [] plankNr= new Vector3[40];
-    public GameObject[] Planks;
-    public GameObject Player;
-    public Collider player;
-    private Vector3 posPlayer;
-    // Vector3 pa = new Vector3();
-     
+    public GameObject prePlank ;
+    Vector3 plankPos = new Vector3();
+   
+  // public GameObject ThisPlank;
+    float nX;
+    float nY;
+        float nZ;
+
 
     void Start()
     {
-      //Planks = GameObject.FindGameObjectsWithTag("Plank");
-       
 
-        // So I have found a giant error in the code all the coordinats for each plank[i] is the same so I am going to need som help
-        for (int i = 0; i < Planks.Length; i++)
-
-        {
-
-            //This works when using The gameObject Planks,
-           
-         //  plankNr[i] = new Vector3(Planks[i].transform.localPosition.x, Planks[i].transform.localPosition.y, Planks[i].transform.localPosition.z);
-           
-            plankNr[i].Set(Planks[i].transform.localPosition.x, Planks[i].transform.localPosition.y, Planks[i].transform.localPosition.z);
-          //  print("nr " + i + " " + plankNr[i]);
-           // Debug.Log(plankNr[2] + plankNr[3]);
-
-
-        }
-        
+         
     }
 
 
     // Update is called once per frame
     void Update()
 {
-        checkPlayerLocation();
-      //  playerOnPlank();
+        nX = gameObject.transform.position.x - prePlank.transform.position.x;
+        nY = gameObject.transform.position.y - prePlank.transform.position.y;
+        nZ = gameObject.transform.position.z - prePlank.transform.position.z;
+        //  ropePos = new Vector3(planks[0].transform.position.x - newX, planks[0].transform.position.y + newY, planks[0].transform.position.z + newZ);
+        // print(reduce);
+        //  rope.transform.position = ropePos;
+        plankPos = new Vector3(gameObject.transform.position.x, prePlank.transform.position.y, prePlank.transform.position.z);
+        gameObject.transform.position = plankPos;
+
+     
     }
 
     
-    void checkPlayerLocation()
-    {
-        posPlayer = new Vector3 (Player.transform.localPosition.x , Player.transform.localPosition.y , Player.transform.localPosition.z);
-      // print( "Player Location is " + Player.transform.localPosition.x + Player.transform.localPosition.y+ Player.transform.localPosition.z);
-        OnTriggerEnter(player);
-    }
+   
 
 
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("hey ");
-    }
-
-    /* void playerOnPlank()
-     {
-         if (posPlayer.y(plankNr[plankNr.Length]))
-         {
-             print("RUN!");
-         }
-     }*/
-
+  
 }

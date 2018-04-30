@@ -39,7 +39,7 @@ public class RopeScript : MonoBehaviour {
     void PlaceRope()
     {
         //Quaternion.Euler
-     //  rot = Quaternion.Euler(planks[0].transform.rotation.x/4, planks[0].transform.rotation.y, planks[0].transform.rotation.z);
+       rot = Quaternion.Euler(planks[0].transform.rotation.x/4, planks[0].transform.rotation.y, planks[0].transform.rotation.z);
         // rot2 = rot.z*;
        // rot = Quaternion.Euler(planks[0].transform.localRotation.x,planks[0].transform.localRotation.y,planks[0].transform.localRotation.z);
             //= new Vector3(planks[0].transform.rotation.x, planks[0].transform.rotation.y, planks[0].transform.rotation.z);
@@ -48,7 +48,7 @@ public class RopeScript : MonoBehaviour {
         ropePos = new Vector3(planks[0].transform.position.x-newX, planks[0].transform.position.y+newY, planks[0].transform.position.z+newZ    );
        // print(reduce);
          rope.transform.position = ropePos;
-      //  rope.transform.rotation = rot;
+        rope.transform.rotation = rot;
     }
 
 

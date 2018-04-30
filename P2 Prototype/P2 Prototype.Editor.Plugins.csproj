@@ -292,6 +292,26 @@
     <Compile Include="Assets\Standard Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Obi\Editor\Resources\DistanceFieldPreview.shader" />
+    <None Include="Assets\Obi\Editor\Resources\EditorLineShader.shader" />
+    <None Include="Assets\Obi\Editor\Resources\EditorParticle.shader" />
+    <None Include="Assets\Obi\Editor\Resources\EditorParticleRadius.shader" />
+    <None Include="Assets\Obi\Editor\Resources\FlatSurfaceShader.shader" />
+    <None Include="Assets\Obi\Editor\Resources\PropertyGradientMaterial.shader" />
+    <None Include="Assets\Obi\Editor\Resources\TopologyBorders.shader" />
+    <None Include="Assets\Obi\Plugins\libOni.bundle\Contents\Resources\CMakeLists.txt" />
+    <None Include="Assets\Obi\Resources\ObiMaterials\DistanceFieldSlice.shader" />
+    <None Include="Assets\Obi\Resources\ObiMaterials\LitParticles.shader" />
+    <None Include="Assets\Obi\Resources\ObiMaterials\ObiEllipsoids.cginc" />
+    <None Include="Assets\Obi\Resources\ObiMaterials\ObiParticles.cginc" />
+    <None Include="Assets\Obi\Resources\ObiMaterials\ObiUtils.cginc" />
+    <None Include="Assets\Obi\Resources\ObiMaterials\ParticleShader.shader" />
+    <None Include="Assets\Obi\Resources\ObiMaterials\SimpleParticleShader.shader" />
+    <None Include="Assets\Obi\Resources\ObiMaterials\StandardBackfaces.shader" />
+    <None Include="Assets\Obi\Resources\ObiMaterials\StandardVertexColors.shader" />
+    <None Include="Assets\Obi\Resources\ObiMaterials\UnityStandardCoreBackfaces.cginc" />
+    <None Include="Assets\Obi\Resources\ObiMaterials\UnityStandardCoreForwardBackfaces.cginc" />
+    <None Include="Assets\Obi\Resources\ObiMaterials\UnityStandardCoreForwardSimpleBackfaces.cginc" />
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
     <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
     <None Include="Assets\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
