@@ -241,12 +241,17 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\_Scripts\BrigdeScript.cs" />
     <Compile Include="Assets\_Scripts\CamraOrbit.cs" />
+    <Compile Include="Assets\_Scripts\DummiScript.cs" />
     <Compile Include="Assets\_Scripts\Movement.cs" />
     <Compile Include="Assets\_Scripts\NodeScript.cs" />
     <Compile Include="Assets\_Scripts\PlanksScriptOne.cs" />
+    <Compile Include="Assets\_Scripts\RopeScript.cs" />
     <Compile Include="Assets\_Scripts\RotateObject.cs" />
     <Compile Include="Assets\_Scripts\ShowUserDirectionScript.cs" />
+    <Compile Include="Assets\scripts\WindArea.cs" />
+    <Compile Include="Assets\scripts\WindInfluenceObj.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
