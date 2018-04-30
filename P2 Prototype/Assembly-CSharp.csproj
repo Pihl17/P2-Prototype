@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\_Scripts\BrigdeScript.cs" />
      <Compile Include="Assets\_Scripts\CamraOrbit.cs" />
      <Compile Include="Assets\_Scripts\DummiScript.cs" />
      <Compile Include="Assets\_Scripts\Movement.cs" />
@@ -59,6 +60,8 @@
      <Compile Include="Assets\_Scripts\RopeScript.cs" />
      <Compile Include="Assets\_Scripts\RotateObject.cs" />
      <Compile Include="Assets\_Scripts\ShowUserDirectionScript.cs" />
+     <Compile Include="Assets\scripts\WindArea.cs" />
+     <Compile Include="Assets\scripts\WindInfluenceObj.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Programmer/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
