@@ -1,10 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_Scripts\NodeScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_Scripts\PlanksScriptOne.cs">
     <Files>
+      <File FileName="Assets\_Scripts\PlanksScriptOne.cs" Line="31" Column="78" />
+      <File FileName="Assets\_Scripts\BrigdeScript.cs" Line="1" Column="1" />
       <File FileName="Assets\_Scripts\NodeScript.cs" Line="24" Column="55" />
-      <File FileName="Assets\_Scripts\Movement.cs" Line="33" Column="3" />
-      <File FileName="Assets\_Scripts\ShowUserDirectionScript.cs" Line="13" Column="144" />
+      <File FileName="Assets\_Scripts\Movement.cs" Line="1" Column="1" />
+      <File FileName="Assets\_Scripts\ShowUserDirectionScript.cs" Line="1" Column="1" />
       <File FileName="Assets\_Scripts\DummiScript.cs" Line="1" Column="1" />
       <File FileName="Assets\Standard Assets\Utility\SimpleActivatorMenu.cs" Line="1" Column="1" />
       <File FileName="Assets\_Scripts\RopeScript.cs" Line="1" Column="1" />
