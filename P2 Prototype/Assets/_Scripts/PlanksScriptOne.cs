@@ -13,7 +13,7 @@ public class PlanksScriptOne : MonoBehaviour
   // public GameObject ThisPlank;
     float nX;
     float nY;
-        float nZ;
+  //      float nZ;
 
 
     void Start()
@@ -28,7 +28,7 @@ public class PlanksScriptOne : MonoBehaviour
 {
         nX = gameObject.transform.position.x - prePlank.transform.position.x;
         nY = gameObject.transform.position.y - prePlank.transform.position.y;
-        nZ = gameObject.transform.position.z - prePlank.transform.position.z;
+      //  nZ = gameObject.transform.position.z - prePlank.transform.position.z;
         //  ropePos = new Vector3(planks[0].transform.position.x - newX, planks[0].transform.position.y + newY, planks[0].transform.position.z + newZ);
         // print(reduce);
         //  rope.transform.position = ropePos;
