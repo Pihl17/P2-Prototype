@@ -60,6 +60,9 @@
   </ItemGroup>
   <ItemGroup>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a0cc2c9aaef492f54bb9c08be1982b39fddbf786
     <Compile Include="Assets\_Scripts\BrigdeScript.cs" />
     <Compile Include="Assets\_Scripts\CamraOrbit.cs" />
     <Compile Include="Assets\_Scripts\DummiScript.cs" />
@@ -425,6 +428,7 @@
     <Reference Include="Boo.Lang">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
 =======
      <Compile Include="Assets\_Scripts\BrigdeScript.cs" />
      <Compile Include="Assets\_Scripts\CamraOrbit.cs" />
@@ -595,6 +599,8 @@
  <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
  </Reference>
 >>>>>>> d79861cecaf5564c308c65b9e2397f9ab0d16472
+=======
+>>>>>>> a0cc2c9aaef492f54bb9c08be1982b39fddbf786
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
